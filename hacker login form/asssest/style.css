@@ -1,0 +1,299 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    background-position: fixed;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: black;
+    animation: background 3s infinite;
+}
+
+@keyframes background {
+    from {
+        transition: 1s;
+        background: lime;
+    }
+
+    to {
+        background: black;
+    }
+}
+
+.body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-basis: 2px;
+    justify-content: center;
+}
+
+.Direction {
+    display: flex;
+    flex-direction: column;
+}
+
+.Direction .card {
+    width: 80px;
+    height: 80px;
+    margin: 2px 2px;
+    padding: 2px 2px;
+    background: rgb(21, 21, 21);
+    transition: 1s;
+}
+
+.card:hover {
+    background: lime;
+}
+
+form {
+    background: #fff;
+    height: 600px;
+    width: 350px;
+    z-index: 10;
+    position: absolute;
+    border-radius: 1px;
+    border: 1.5px solid black;
+    overflow: hidden;
+}
+
+.Login_form_text {
+    margin: 1.5em 2em;
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lime;
+}
+
+.Email_Text {
+    display: flex;
+    flex-direction: column;
+    margin: 5em 0em;
+}
+
+.Email_Text label {
+    color: black;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0em 1em;
+}
+
+.Email_Text input {
+    width: 300px;
+    margin: 1em 1em;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid limegreen;
+    font-size: 20px;
+    background: transparent;
+}
+
+.Password_Text {
+    display: flex;
+    flex-direction: column;
+    margin: 0em 0em;
+}
+
+.Password_Text label {
+    color: black;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0em 1em;
+}
+
+.Password_Text input {
+    width: 300px;
+    margin: 1em 1em;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid limegreen;
+    font-size: 20px;
+}
+
+.Submit_Button {
+    margin: 6em 3em;
+}
+
+.Submit_Button button {
+    background: lime;
+    width: 250px;
+    height: 30px;
+    border: 2px solid lime;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+#Error_Email {
+    color: red;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(255, 0, 0, 0.573);
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: -0.5em 1.3em;
+    border: 1px solid red;
+    border-radius: 20px;
+    display: none;
+}
+
+#Error_Password {
+    color: red;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(255, 0, 0, 0.573);
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: -0.5em 1.3em;
+    border: 1px solid red;
+    border-radius: 20px;
+    display: none;
+}
+
+#Balls_animation {
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    margin: 1em 1em;
+    z-index: 200;
+    visibility: hidden;
+}
+
+#Balls_animation #ball_1 {
+    height: 40px;
+    width: 40px;
+    background: black;
+    border: 2px solid lime;
+    border-radius: 50%;
+    animation: ball_1 1.5s infinite;
+}
+
+#Balls_animation #ball_2 {
+    height: 40px;
+    width: 40px;
+    background: black;
+    border: 2px solid lime;
+    border-radius: 50%;
+    margin: 0em 5px;
+    animation: ball_2 1.5s infinite;
+}
+
+#Balls_animation #ball_3 {
+    height: 40px;
+    width: 40px;
+    background: black;
+    border: 2px solid lime;
+    border-radius: 50%;
+    margin: 0em 5px;
+    animation: ball_3 1.5s infinite;
+}
+
+#Balls_animation #ball_4 {
+    height: 40px;
+    width: 40px;
+    background: black;
+    border: 2px solid lime;
+    border-radius: 50%;
+    animation: ball_4 1.5s infinite;
+}
+
+@keyframes ball_1 {
+    20%,
+    100% {
+        margin-top: -1em;
+    }
+
+    40%,
+    100% {
+        margin-top: 0em;
+    }
+
+    60%,
+    100% {
+        margin-top: 1em;
+    }
+
+    100%,
+    100% {
+        margin-top: 0em;
+    }
+}
+
+@keyframes ball_2 {
+    20%,
+    100% {
+        margin-top: 1em;
+    }
+
+    40%,
+    100% {
+        margin-top: 0em;
+    }
+
+    60%,
+    100% {
+        margin-top: -1em;
+    }
+
+    100%,
+    100% {
+        margin-top: 0em;
+    }
+}
+
+@keyframes ball_3 {
+    20%,
+    100% {
+        margin-top: -1em;
+    }
+
+    40%,
+    100% {
+        margin-top: 0em;
+    }
+
+    60%,
+    100% {
+        margin-top: 1em;
+    }
+
+    100%,
+    100% {
+        margin-top: 0em;
+    }
+}
+
+@keyframes ball_4 {
+    20%,
+    100% {
+        margin-top: 1em;
+    }
+
+    40%,
+    100% {
+        margin-top: 0em;
+    }
+
+    60%,
+    100% {
+        margin-top: -1em;
+    }
+
+    100%,
+    100% {
+        margin-top: 0em;
+    }
+}
